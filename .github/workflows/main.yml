@@ -195,14 +195,14 @@ jobs:
         token: ${{ secrets.TELEGRAM_TOKEN }}
         parse_mode: html
         message: |
-          <b>Успешный деплой!</b>
+          Успешный деплой!
           
-          Инициатор: <code>${{ github.actor }}</code>
-          Репозиторий: <code>${{ github.repository }}</code>
-          Коммит: <i>${{ github.event.head_commit.message }}</i>
+          Инициатор: ${{ github.actor }}
+          Репозиторий: ${{ github.repository }}
+          Коммит: ${{ github.event.head_commit.message }}
           
           Ссылка на коммит: 
-          <a href="https://github.com/${{ github.repository }}/commit/${{ github.sha }}"></a>
+          "https://github.com/${{ github.repository }}/commit/${{ github.sha }}"
           
           Просмотреть workflow: 
-          <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">${{ github.run_id }}</a>
+          "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
