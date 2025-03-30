@@ -193,8 +193,10 @@ jobs:
       with:
         to: ${{ secrets.TELEGRAM_TO }}
         token: ${{ secrets.TELEGRAM_TOKEN }}
-        message: | 
-          <b>Деплой успешно выполнен!</b>
+        parse_mode: html
+        message: |
+          <b>Успешный деплой!</b>
+          
           Инициатор: <code>${{ github.actor }}</code>
           Репозиторий: <code>${{ github.repository }}</code>
           Коммит: <i>${{ github.event.head_commit.message }}</i>
