@@ -202,7 +202,7 @@ jobs:
           Коммит: <i>${{ github.event.head_commit.message }}</i>
           
           Ссылка на коммит: 
-          <a href="https://github.com/${{ github.repository }}/commit/${{ github.sha }}">${{ github.sha | truncate(7, true, '') }}</a>
+          <a href="https://github.com/${{ github.repository }}/commit/${{ github.sha }}"></a>
           
           Просмотреть workflow: 
           <a href="https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}">${{ github.run_id }}</a>
